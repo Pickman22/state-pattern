@@ -4,6 +4,10 @@
 #include "stop_watch.h"
 #include <stdio.h>
 
+static void start_state_start(stop_watch *w);
+static void start_state_stop(stop_watch *w);
+static void start_state_tick(stop_watch *w);
+
 const stop_watch_if start_state_if = {
     .start = start_state_start,
     .stop = start_state_stop,
